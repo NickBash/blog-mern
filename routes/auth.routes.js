@@ -85,9 +85,9 @@ router.post(
         expiresIn: '1h',
       })
 
-      res.json({ token, userId: user.id })
+      res.status(201).json({ token, userId: user.id })
 
-      res.status(201).json({ message: 'Пользователь создан' })
+      //res.status(201).json({ message: 'Пользователь создан' })
     } catch (e) {
       res
         .status(500)

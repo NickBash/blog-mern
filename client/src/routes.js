@@ -4,6 +4,7 @@ import AuthPage from './pages/AuthPage/AuthPage'
 import CreatePage from './pages/CreatePost/CreatePost'
 import DetailPage from './pages/DetailPage/DetailPage'
 import PostsPage from './pages/PostsPage/PostsPage'
+import LoginPage from './pages/LoginPage/LoginPage'
 
 export const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
@@ -27,6 +28,9 @@ export const useRoutes = (isAuthenticated) => {
     <Switch>
       <Route path="/" exact>
         <AuthPage></AuthPage>
+      </Route>
+      <Route path="/login">
+        <LoginPage></LoginPage>
       </Route>
       <Redirect to="/"></Redirect>
     </Switch>
