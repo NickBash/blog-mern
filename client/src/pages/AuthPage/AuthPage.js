@@ -41,7 +41,7 @@ function AuthPage() {
   }
 
   return (
-    <div className="container auth">
+    <div className="auth">
       <div className="auth__box">
         <form className="auth__form" method="post">
           <h2 className="auth__title">Регистрация</h2>
@@ -88,7 +88,7 @@ function AuthPage() {
           </button>
           <div className="auth__login">
             <p className="auth__login-descr">У вас уже есть аккаунт?</p>
-            <a href="/" className="auth__login-link">
+            <a href="/login" className="auth__login-link">
               Войти
             </a>
           </div>

@@ -1,0 +1,11 @@
+.nav {
+  height: 50px;
+  background: darkcyan;
+  &__list {
+    float: right;
+  }
+  &__link {
+    display: inline-block;
+    margin-left: 30px;
+  }
+}

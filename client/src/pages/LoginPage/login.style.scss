@@ -52,7 +52,7 @@
       transform: scale(1.05);
     }
   }
-  &__login {
+  &__reg {
     padding-top: 30px;
   }
   &__error {
@@ -60,5 +60,12 @@
   }
   &__check {
     color: green;
+  }
+  &__reg-link {
+    color: #1c9bb8;
+    &:hover {
+      color: darkcyan;
+      text-decoration: underline;
+    }
   }
 }

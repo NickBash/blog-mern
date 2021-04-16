@@ -42,7 +42,7 @@ function LoginPage() {
   }
 
   return (
-    <div className="container login">
+    <div className="login">
       <div className="login__box">
         <form className="login__form" method="post">
           <h2 className="login__title">Вход</h2>
@@ -78,9 +78,9 @@ function LoginPage() {
           >
             Войти
           </button>
-          <div className="login__login">
-            <p className="login__login-descr">У Вас нет аккаунта?</p>
-            <a href="/" className="login__login-link">
+          <div className="login__reg">
+            <p className="login__reg-descr">У Вас нет аккаунта?</p>
+            <a href="/register" className="login__reg-link">
               Зарегистрироваться
             </a>
           </div>
