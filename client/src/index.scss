@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: #f2f2f2;
 }
@@ -23,6 +30,8 @@ code {
 .btn {
   outline: none;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   border: none;
 }
@@ -52,5 +61,14 @@ a {
   &:active {
     text-decoration: none;
     color: white;
+  }
+}
+
+textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  &:focus {
+    outline: none;
   }
 }

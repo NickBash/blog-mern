@@ -13,13 +13,13 @@ export const useRoutes = (isAuthenticated) => {
         <Route path="/posts" exact>
           <PostsPage></PostsPage>
         </Route>
-        <Route path="/create" exact>
+        <Route path="/create">
           <CreatePage></CreatePage>
         </Route>
         <Route path="/detail/:id">
           <DetailPage></DetailPage>
         </Route>
-        <Redirect to="/create"></Redirect>
+        <Redirect to="/posts"></Redirect>
       </Switch>
     )
   }
