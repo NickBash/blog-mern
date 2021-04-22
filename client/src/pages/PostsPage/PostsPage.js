@@ -1,4 +1,4 @@
-//import './auth.style.scss'
+//import './posts.style.scss'
 
 function PostsPage() {
   return (

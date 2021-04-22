@@ -37,9 +37,9 @@ router.get('/', auth, async (req, res) => {
 
 router.get('/:id', auth, async (req, res) => {
   try {
+    const post = await Post.findById(req.params.id)
+    res.json(post)
   } catch (e) {
-    const posts = await Post.findById(req.params.id)
-    res.json(posts)
     res
       .status(500)
       .json({ message: 'Во время регистрации что-то пошло не так' })
