@@ -26,7 +26,7 @@ function App() {
     >
       <Router>
         {isAuthenticated && <Navbar />}
-        <div className="container">{routes}</div>
+        <div className="container container-wrapper">{routes}</div>
       </Router>
     </AuthContext.Provider>
   )

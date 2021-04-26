@@ -1,21 +1,22 @@
 //import './posts.style.scss'
 
 import { useState, useContext, useCallback, useEffect } from 'react'
-import { useHttp } from './../../hooks/http.hook'
-import { AuthContext } from './../../context/auth.context'
-import Loader from './../../components/Loader/Loader'
-import { PostCard } from '../../components/PostCard/PostCard'
+import { useHttp } from '../../hooks/http.hook'
+import { AuthContext } from '../../context/auth.context'
+import Loader from '../../components/Loader/Loader'
+import PostsList from '../../components/PostsList/PostsList'
 
-function PostsPage() {
+function MyPage() {
   const [posts, setPosts] = useState([])
   const { loading, request } = useHttp()
   const { token } = useContext(AuthContext)
 
   const fetchPosts = useCallback(async () => {
     try {
-      const data = await request('/api/post', 'GET', null, {
+      const data = await request('/api/post/main', 'GET', null, {
         Authorization: `Bearer ${token}`,
       })
+      console.log(data)
       setPosts(data)
     } catch (error) {}
   }, [token, request])
@@ -28,8 +29,7 @@ function PostsPage() {
     return <Loader />
   }
 
-  const cards = posts.map((post) => <PostCard key={post._id} post={post} />)
-  return <>{!loading && cards} </>
+  return <>{!loading && <PostsList posts={posts} />}</>
 }
 
-export default PostsPage
+export default MyPage

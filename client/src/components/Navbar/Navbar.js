@@ -18,7 +18,10 @@ export const Navbar = () => {
       <div className="container">
         <ul className="nav__list">
           <li className="nav__link">
-            <NavLink to="/posts">Посты</NavLink>
+            <NavLink to="/posts">Все посты</NavLink>
+          </li>
+          <li className="nav__link">
+            <NavLink to="/my">Мои посты</NavLink>
           </li>
           <li className="nav__link">
             <NavLink to="/create">Создание</NavLink>

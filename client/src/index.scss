@@ -25,6 +25,12 @@ code {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 15px;
+  &-wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .btn {

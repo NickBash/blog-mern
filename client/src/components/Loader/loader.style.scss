@@ -1,6 +1,9 @@
 .loading {
   $colors: #7ef9ff, #89cff0, #4682b4, #0f52ba, #000080;
+  padding-top: 30px;
   display: flex;
+  width: 100%;
+  justify-content: center;
 
   .dot {
     position: relative;
